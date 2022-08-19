@@ -1,0 +1,40 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    // временно
+    background-color: rgba(0, 170, 238, 0.9);
+    }
+
+.navigation{
+    width: 114px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo{
+    width: 186px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sandwich{
+    width: 36px;
+    height: 36px;
+    border: none;
+    outline: none;
+    background: #BE123C;
+    border-radius: 50%;
+}
+
+img{
+    cursor: pointer;
+    
+}
+
+
