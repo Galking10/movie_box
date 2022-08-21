@@ -1,0 +1,38 @@
+.poster{
+    width: 250px;
+    margin-bottom: 12px;
+    
+}
+
+.movie_item{
+    width: 250px;
+    margin: auto;
+}
+
+.rating {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: black;
+    margin-bottom: 12px;
+  }
+
+.country_date{
+    font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+color: #9CA3AF;
+}  
+
+h3{
+    margin: 0 0 12px 0;
+}
+
+
+

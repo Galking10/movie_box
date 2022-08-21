@@ -16,10 +16,10 @@ export const Header = () => {
       </div>
       <Form />
       <div className="navigation">
-        <Link to="/">
-          <span>Sign in</span>
+        <Link className='sign' to="/">
+          Sign in
         </Link>
-        <button className='sandwich'><Icons type='sandwich'/></button>
+        <div className='sandwich'><Icons type='sandwich' fill='white' /></div>
       </div>
     </header>
   );

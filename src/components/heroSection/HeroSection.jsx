@@ -1,46 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getHeroMovieThunk } from "../../slices/HeroSectionSlice";
-import './styles.scss'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Icons } from '../../asset/Icons';
+import { getHeroMovieThunk } from '../../slices/HeroSectionSlice';
+import { Header } from '../header/Header';
+import './styles.scss';
+import rating from '../../asset/rating.png';
+
+export const HeroSection = () => {
+  const dispatch = useDispatch();
 
 
+  const { heroImages, movie, trailer } = useSelector(state => state.heroData);
 
+ 
+  useEffect(() => {
+    dispatch(getHeroMovieThunk());
+  }, [dispatch]);
 
-export const HeroSection = ()=>{
-    const dispatch = useDispatch()
-   
-    const {heroImage, movie} = useSelector((state)=> state.heroData)
-
-    const [first, setfirst] = useState('')
-    
-    console.log(heroImage)
-    console.log(movie)
-    
-    useEffect(() => {
-        dispatch(getHeroMovieThunk())
+  return (
+    <>
+      <section
+        style={{
+          background: 'center contain',  
+          backgroundSize: '1440px',
+          backgroundPosition: '50% 50%',
+          backgroundImage: `url("https://image.tmdb.org/t/p/original/${
+            heroImages}")`,
+        }}
+      >
+        <Header />
+        <div className='container'>
+          <div className='movie_info'>
+          <h1 className='movie_title'>{movie?.title}</h1>
+          <div className='rating'> 
+          <img src={rating} alt="rating" />
+          {movie?.vote_average?.toFixed(1)}</div>
+          <p className='overview'>{movie?.overview}</p>
+          <a href={`https://www.youtube.com/watch?v=${trailer}`}
+          target='_blank'
+          className='trailer_button'>
+            <Icons type='play'/>
+            WATCH TRAILER</a>
+        </div></div>
         
-      }, [dispatch])
-
-    //   useEffect(()=>{
-    //     heroImage?.backdrops[0].file_path && setfirst(heroImage?.backdrops[0].file_path)
-    //   }, [heroImage.backdrops])
-
-    
-   
-      
-
-    return(
-        <>
-       <section   style={{ 
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${first}")` 
-          }}>
-            <div>
-                <h1>{movie?.title}</h1>
-                <p>rating: {movie?.vote_average}</p>
-                <p>{movie?.overview}</p>
-                <button>WATCH TRAILER</button>
-            </div>
-        </section>
-        </>
-    )
-}
+      </section>
+    </>
+  );
+};

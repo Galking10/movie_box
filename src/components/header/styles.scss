@@ -1,40 +1,58 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    // временно
-    background-color: rgba(0, 170, 238, 0.9);
-    }
-
-.navigation{
-    width: 114px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo{
-    width: 186px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
+.navigation {
+  width: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  outline: none;
 }
 
-.sandwich{
-    width: 36px;
-    height: 36px;
-    border: none;
-    outline: none;
-    background: #BE123C;
-    border-radius: 50%;
+.logo {
+  width: 186px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: white;
 }
 
-img{
-    cursor: pointer;
-    
+.sandwich {
+  width: 36px;
+  height: 36px;
+  background: #be123c;
+  border-radius: 50%;
 }
 
+.sandwich svg{
+  margin: 13.2px 0 0 8.6px;
+}
 
+.sign{
+  font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+img {
+  cursor: pointer;
+}

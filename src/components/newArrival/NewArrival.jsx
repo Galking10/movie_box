@@ -6,12 +6,12 @@ import './styles.scss';
 import { Icons } from '../../asset/Icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { MovieItem } from '../movieItem/MovieItem';
-import { getMoviesThunk } from '../../slices/MoviesSlice';
+import { getNewMoviesThunk } from '../../slices/NewArrivalSlice';
 
 
-export const FeaturedMovie = () => {
+export const NewArrival = () => {
     const dispatch = useDispatch();
-    const  {movies} = useSelector(state => state.moviesData);
+    const  {movies} = useSelector(state => state.newArrivalData);
     const settings = {
         dots:true,
         arrows: true,
@@ -24,14 +24,14 @@ export const FeaturedMovie = () => {
     }
 
     useEffect(() => {
-        dispatch(getMoviesThunk());
+        dispatch(getNewMoviesThunk());
       }, [dispatch]);
 
 
   return (
        <section className="container trends">
       <div className='featured-header'>
-        <h2>Trends Movies</h2>
+        <h2>Now Playing</h2>
         <p>See more `{'>'} `</p>
       </div>
       <Slider {...settings}>

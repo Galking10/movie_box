@@ -17,3 +17,8 @@ code {
   width: 1240px;
   margin: 0 auto;
 }
+
+button{
+  cursor: pointer;
+}
+
