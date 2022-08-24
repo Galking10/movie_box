@@ -10,11 +10,11 @@ export const HeroSection = () => {
   const dispatch = useDispatch();
 
 
-  const { heroImages, movie, trailer } = useSelector(state => state.heroData);
+  const { heroImages, movie, trailer } = useSelector(state => state.heroData.heroObject);
 
  
   useEffect(() => {
-    dispatch(getHeroMovieThunk());
+    dispatch(getHeroMovieThunk('507086'));
   }, [dispatch]);
 
   return (
@@ -32,7 +32,7 @@ export const HeroSection = () => {
         <div className='container'>
           <div className='movie_info'>
           <h1 className='movie_title'>{movie?.title}</h1>
-          <div className='rating'> 
+          <div className='rating_hero'> 
           <img src={rating} alt="rating" />
           {movie?.vote_average?.toFixed(1)}</div>
           <p className='overview'>{movie?.overview}</p>
@@ -40,7 +40,7 @@ export const HeroSection = () => {
           target='_blank'
           className='trailer_button'>
             <Icons type='play'/>
-            WATCH TRAILER</a>
+            <span>WATCH TRAILER</span></a>
         </div></div>
         
       </section>

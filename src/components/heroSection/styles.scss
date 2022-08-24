@@ -19,7 +19,7 @@ section {
   margin-bottom: 18px;
 }
 
-.rating {
+.rating_hero {
   width: 60px;
   display: flex;
   justify-content: space-between;
@@ -43,8 +43,8 @@ section {
 }
 
 .trailer_button {
-  padding: 10px 16px 0 16px;
-  width: 153x;
+  padding: 7px 16px 0 16px;
+  width: 135px;
   height: 26px;
   background: #be123c;
   border-radius: 6px;
@@ -55,11 +55,13 @@ section {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
-  display:inline-block;
-  align-items: center;
-  text-align: center;
+  display:flex;
+  justify-content: space-between;
+
+
 }
 
 .trailer_button svg {
-  margin-right: 10px;
+ 
+  margin: 2.5px 0;
 }

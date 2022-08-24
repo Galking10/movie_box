@@ -15,4 +15,6 @@ export const getMovies = ()=> axios.get(`https://api.themoviedb.org/3/trending/a
 
 export const getNewMovies = ()=> axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`)
 
+export const getPopularPersons = ()=> axios.get(`https://api.themoviedb.org/3/person/popular?api_key=${key}&language=en-US&page=1`)
+
 

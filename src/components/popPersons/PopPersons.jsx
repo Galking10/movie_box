@@ -5,13 +5,13 @@ import Slider from 'react-slick';
 import './styles.scss';
 import { Icons } from '../../asset/Icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { MovieItem } from '../movieItem/MovieItem';
-import { getNewMoviesThunk } from '../../slices/NewArrivalSlice';
+import { getPersonsThunk } from '../../slices/PersonsSlice';
+import { PersonItem } from '../personItem/PersonItem';
 
 
-export const NewArrival = () => {
+export const PopPersons = () => {
     const dispatch = useDispatch();
-    const  {movies} = useSelector(state => state.newArrivalData);
+    const  {persons} = useSelector(state => state.personsData);
     const settings = {
         dots:true,
         arrows: true,
@@ -24,19 +24,19 @@ export const NewArrival = () => {
     }
 
     useEffect(() => {
-        dispatch(getNewMoviesThunk());
+        dispatch(getPersonsThunk());
       }, [dispatch]);
 
 
   return (
        <section className="container trends">
       <div className='featured-header'>
-        <h2>Now Playing</h2>
+        <h2>Popular actors</h2>
         <p>See more {'>'} </p>
       </div>
       <Slider {...settings}>
-        {movies?.results?.map(item => {
-                  return <MovieItem props={item} key={item.id} />;
+        {persons?.results?.map(item => {
+                  return <PersonItem props={item} key={item.id} />;
                 })}
        </Slider>
     </section>

@@ -3,21 +3,44 @@ import { getMovieData, getMovieImages, getTrailer } from "../api/api";
 
 
 const initialState = {
-    heroImages: {},
-    movie: {},
-    trailer: {},
+    heroObject: {},
+    movieObject: {},
+
 }
 
+
+
 export const getHeroMovieThunk = createAsyncThunk(
-    'heroImage/getHeroImage',
-    async (_, {rejectWithValue, dispatch}) =>{
+    'heroObject/getHeroObject', 
+    async (id, {rejectWithValue, dispatch}) =>{
         try {
-            const images = await getMovieImages('507086')
-            dispatch(setHeroImage(images.data.backdrops[2].file_path)) 
-            const movie = await getMovieData('507086')
-            dispatch(setMovie(movie.data))
-            const trailer = await getTrailer('507086')
-            dispatch(setTrailer(trailer.data.results[7].key))
+            const object = {}
+            const images = await getMovieImages(id)
+            object.heroImages = images.data.backdrops[2].file_path
+            const movie = await getMovieData(id)
+            object.movie = movie.data
+            const trailer = await getTrailer(id)
+            object.trailer = trailer.data.results[7].key
+            dispatch(setHeroMovieObject(object))
+        } catch (error) {
+            console.log(error)
+        }
+        
+    }
+)
+
+export const getMovieThunk = createAsyncThunk(
+    'movieObject/getMovieObject', 
+    async (id, {rejectWithValue, dispatch}) =>{
+        try {
+            const object = {}
+            const images = await getMovieImages(id)
+            object.heroImages = images.data.backdrops[2].file_path
+            const movie = await getMovieData(id)
+            object.movie = movie.data
+            const trailer = await getTrailer(id)
+            object.trailer = trailer.data.results[7].key
+            dispatch(setMovieObject(object))
         } catch (error) {
             console.log(error)
         }
@@ -29,15 +52,14 @@ export const heroDataSlice = createSlice({
     name: 'heroImage',
     initialState,
     reducers:{
-        setMovie: (state, actions)=>{
-            state.movie = actions.payload
+        setHeroMovieObject: (state, actions)=>{
+            state.heroObject = actions.payload
+            
         },
-        setHeroImage: (state, actions) =>{
-            state.heroImages = actions.payload
+        setMovieObject: (state, actions)=>{
+            state.movieObject = actions.payload
+            
         },
-        setTrailer: (state, actions)=>{
-            state.trailer = actions.payload
-        }
     },
     extraReducers:{
         [getHeroMovieThunk.fulfilled]:()=>console.log('fulfilled'),
@@ -46,7 +68,7 @@ export const heroDataSlice = createSlice({
     }
 })
 
-export const {setHeroImage, setMovie, setTrailer} = heroDataSlice.actions
+export const {setMovieObject, setHeroMovieObject} = heroDataSlice.actions
 
 
 export default heroDataSlice.reducer
