@@ -35,11 +35,11 @@ export const getMovieThunk = createAsyncThunk(
         try {
             const object = {}
             const images = await getMovieImages(id)
-            object.heroImages = images.data.backdrops[2].file_path
+            object.heroImages = images.data
             const movie = await getMovieData(id)
             object.movie = movie.data
             const trailer = await getTrailer(id)
-            object.trailer = trailer.data.results[7].key
+            object.trailer = trailer.data
             dispatch(setMovieObject(object))
         } catch (error) {
             console.log(error)
@@ -58,13 +58,14 @@ export const heroDataSlice = createSlice({
         },
         setMovieObject: (state, actions)=>{
             state.movieObject = actions.payload
+            console.log('actions', actions.payload)
             
         },
     },
     extraReducers:{
-        [getHeroMovieThunk.fulfilled]:()=>console.log('fulfilled'),
-        [getHeroMovieThunk.pending]:()=>console.log('pending'),
-        [getHeroMovieThunk.rejected]:()=>console.log('rejected'),
+        // [getHeroMovieThunk.fulfilled]:()=>console.log('fulfilled'),
+        // [getHeroMovieThunk.pending]:()=>console.log('pending'),
+        // [getHeroMovieThunk.rejected]:()=>console.log('rejected'),
     }
 })
 

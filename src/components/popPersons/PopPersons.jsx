@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import '../../../node_modules/slick-carousel/slick/slick.scss';
 import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
 import Slider from 'react-slick';
-import './styles.scss';
 import { Icons } from '../../asset/Icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPersonsThunk } from '../../slices/PersonsSlice';

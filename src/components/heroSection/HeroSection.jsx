@@ -30,8 +30,8 @@ export const HeroSection = () => {
       >
         <Header />
         <div className='container'>
-          <div className='movie_info'>
-          <h1 className='movie_title'>{movie?.title}</h1>
+          <div className='hero_info'>
+          <h1 className='hero_title'>{movie?.title}</h1>
           <div className='rating_hero'> 
           <img src={rating} alt="rating" />
           {movie?.vote_average?.toFixed(1)}</div>

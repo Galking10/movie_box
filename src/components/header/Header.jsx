@@ -5,10 +5,11 @@ import logo from '../../asset/tv.png';
 import { Link } from 'react-router-dom';
 import { Icons } from '../../asset/Icons';
 
-export const Header = () => {
+export const Header = ({background}) => {
   return (
-    <header className="container header">
-      <div >
+    <header className=" header" style={{background: background}}>
+      <div className='container inHeader'>
+      <div>
         <Link className='logo' to="/">
           <img src={logo} alt="logo" />
           <span>MovieBox</span>
@@ -20,6 +21,7 @@ export const Header = () => {
           Sign in
         </Link>
         <div className='sandwich'><Icons type='sandwich' fill='white' /></div>
+      </div>
       </div>
     </header>
   );

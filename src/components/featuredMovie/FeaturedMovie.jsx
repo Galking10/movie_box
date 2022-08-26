@@ -31,7 +31,7 @@ export const FeaturedMovie = () => {
   return (
        <section className="container trends">
       <div className='featured-header'>
-        <h2>Trends Movies</h2>
+        <h2 className='section_title'>Trends Movies</h2>
         <p>See more `{'>'} `</p>
       </div>
       <Slider {...settings}>

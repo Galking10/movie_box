@@ -7,10 +7,10 @@ export const Footer = () => {
     <footer>
       <h3 className='heder_title'>Contact with me:</h3>
       <div className='social-links'>
-        <a className='contact' href='https://t.me/galkin1807' target='_blank'><Icons type={'telegram'}/><dr/>
+        <a className='contact' href='https://t.me/galkin1807' target='_blank'><Icons type={'telegram'}/>
         write
         </a>
-        <a  className='contact' href='https://www.linkedin.com/in/kirill-galkin-82015223a/' target='_blank'><Icons type={'linkedin'}/><dr/>
+        <a  className='contact' href='https://www.linkedin.com/in/kirill-galkin-82015223a/' target='_blank'><Icons type={'linkedin'}/>
         go to
         </a>
         <div 
