@@ -1,0 +1,39 @@
+.backdrope{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+}
+
+// .backdrope.active{
+//     transform: scale(1);
+// }
+.trailer_window{
+    position: relative;
+}
+
+.close_btn{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(28,28,28,0);
+    border:0;
+    padding: 0;
+    top: -30px;
+    right: -30px;
+    
+}
+
+
+
+.trailer_window{
+    width: 1240px;
+}

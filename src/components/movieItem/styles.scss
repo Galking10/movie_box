@@ -1,42 +1,37 @@
-.poster{
-    width: 250px;
-    margin-bottom: 12px;
-    
+.poster {
+  width: 250px;
+  margin-bottom: 12px;
 }
 
-.movie_item{
-    width: 250px;
-    margin: auto;
+.movie_item {
+  width: 250px;
+  margin: auto;
 }
 
 .rating {
-    width: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
-    color: black;
-    margin-bottom: 12px;
-  }
-
-.country_date{
-    font-weight: 700;
-font-size: 12px;
-line-height: 16px;
-color: #9CA3AF;
-
-}  
-
-.movie_item_title{
-    margin: 0 0 12px 0;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 47px;
-    color: #000000;
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: black;
+  margin-bottom: 12px;
 }
 
+.country_date {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9ca3af;
+}
 
-
+.movie_item_title {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 47px;
+  color: #000000;
+}

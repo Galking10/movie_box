@@ -2,7 +2,6 @@ import React from "react";
 import { Icons } from "../../asset/Icons";
 import './styles.scss'
 
-
 export const Form = ()=>{
     return(
         <div>

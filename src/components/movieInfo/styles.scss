@@ -1,82 +1,82 @@
-.movie_page{
-    display: flex;
-    justify-content: space-between;
-    margin: 50px auto;
+.movie_page {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
 }
 
-.movie_poster{
-    width: 350px;
+.movie_poster {
+  width: 350px;
 }
 
-.movie_info{
-    width: 850px;
-    margin-top: 50px;
-    
+.movie_info {
+  width: 850px;
+  margin-top: 50px;
 }
-.movie_page_title{
-    color: black;
-    margin-bottom: 15px;
+.movie_page_title {
+  color: black;
+  margin-bottom: 15px;
 }
-.movie_page_title{
-    display: flex;
-    justify-content: flex-start;
-}
-
-.title_name{
-    width: max-content;
-    margin: 0 30px 0 0;
-    font-weight: 500;
-    font-size: 40px;
+.movie_page_title {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.title_date{
-    font-weight: 500;
-    font-size: 40px;
+.title_name {
+  width: max-content;
+  margin: 0 30px 0 0;
+  font-weight: 500;
+  font-size: 40px;
 }
 
-.movie_rating{
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 22px;
+.title_date {
+  font-weight: 500;
+  font-size: 40px;
 }
 
-.movie_genre{
-    width: 100%;
-    display: flex;
-    justify-content:flex-start;
-    margin: auto 0;
+.movie_rating {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 22px;
 }
 
-.genre_item{
-    width: max-content;
-    padding: 5px 10px;
-    margin: 10px 10px 15px 0;
-    color: white;
-    background-color: rgb(128, 114, 114);
-    border-radius: 7px;
-    font-weight: 600;
-    font-size: 20px;
+.movie_genre {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: auto 0;
 }
 
-.genre_title{
-    color: black;
-    font-weight: 600;
-    font-size: 20px;
+.genre_item {
+  width: max-content;
+  padding: 5px 10px;
+  margin: 10px 10px 15px 0;
+  color: white;
+  background-color: rgb(128, 114, 114);
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.movie_country{
-    color: white;
-    background-color: rgb(128, 114, 114);
-    border-radius: 7px;
-    font-weight: 500;
-    font-size: 15px;
-    width: max-content;
-    padding: 5px 10px;
-    margin-bottom: 15px;
+.genre_title {
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.movie_description{
-    font-weight: 400;
-    font-size: 20px;
-    color: black;
+.movie_country {
+  color: white;
+  background-color: rgb(128, 114, 114);
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 15px;
+  width: max-content;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+.movie_description {
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 15px;
 }

@@ -22,19 +22,13 @@ export const ActorsByMovie = ()=>{
             <div>
             <h2>Actors</h2>
             <div className=" actors_by_movie">
-            {actors?.map(item=>{
-                return <PersonItem props={item} key={item?.id}/>
-                
-            })}
+            {actors?.map(item=> item.profile_path && <PersonItem props={item} key={item?.id}/> )}
             </div>
             </div>
             <div>
             <h2>Crew</h2>
             <div className=" actors_by_movie">
-            {crew?.map(item=>{
-                return <PersonItem props={item} key={item?.id}/>
-                
-            })}
+            {crew?.map(item=> item.profile_path && <PersonItem props={item} key={item?.id}/> ) }
             </div>
             </div>
         </section>

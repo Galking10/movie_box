@@ -1,8 +1,7 @@
 section {
   width: 100%;
-  height: 600px;
- 
   margin-bottom: 70px;
+  padding-bottom: 73px;
 }
 
 .hero_info {
@@ -43,9 +42,9 @@ section {
 }
 
 .trailer_button {
-  padding: 7px 16px 0 16px;
-  width: 135px;
-  height: 26px;
+  padding: 7px 16px 7px 16px;
+  width: 169px;
+  height: 36px;
   background: #be123c;
   border-radius: 6px;
   border: none;
@@ -55,10 +54,9 @@ section {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
-  display:flex;
+  display: flex;
   justify-content: space-between;
-
-
+  align-items: center;
 }
 
 .trailer_button svg {
